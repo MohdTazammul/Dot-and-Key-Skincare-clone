@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+   <link rel="stylesheet" href="loginsignup.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div id="login">
+        <h1>Create Account</h1>
+        <!-- <div id="fb"><h2>Facebook Signup</h2></div>
+        <div id="gl"><h2>Google Signup</h2></div> -->
+        <div id="fb">
+            <div class="fa fa-facebook ico" style=" font-size: 32px;">
+                
+            </div>
+            <div>
+                <h2>Facebook Signup</h2>
+            </div>
+        </div>
+
+        <div id="gl">
+            <div class="fa fa-google ico" style="font-size: 32px;"></div>
+            <div>
+
+                <h2>Google Signup</h2>
+            </div>
+        </div>
+        <div class="name">
+            <label for="">FIRST NAME</label>
+            <input type="text"  id="name" >
+        </div>
+        <div id="" class="name">
+            <label for="">LAST NAME</label>
+            <input type="text">
+        </div>
+        <div class="name">
+            <label for="">EMAIL</label>
+            <input type="text"   id="email">
+        </div>
+        <div class="name">
+            <label for="">PASSWORD</label>
+            <input  id="password" type="password">
+        </div>
+        <p id="error"></p>
+        <div id="sub" class="name" onclick="Register()">
+           <h1> Create</h1>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+        async function Register() {
+        let url=`https://masai-api-mocker.herokuapp.com/auth/register`
+        let detail={
+            name:document.getElementById("name").value,
+            email:document.getElementById("email").value,
+            password:document.getElementById("password").value,
+            username:document.getElementById("email").value,
+            mobile:" ",
+            description:" "
+        };
+        console.log(detail)
+        detail=JSON.stringify(detail)
+
+        let res= await fetch(url,{
+            method:"POST",
+
+            body:detail,
+
+            headers:{
+                "Content-Type":"application/json"
+            },
+
+
+
+        });
+
+        let data=await res.json();
+
+        console.log(data)
+        if(data.reponse==false){
+
+            window.location.href="login.html";
+        }else{
+                document.getElementById("error").textContent=data.message;
+        }
+    }
+
+</script>

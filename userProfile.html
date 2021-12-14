@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #detail>h1{
+            text-align: center;
+        }
+        #logout{
+            width: 80px;
+            /* border: 1px solid red; */
+            margin: auto;
+            font-weight: bolder;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #myaccdetail{
+            display: grid;
+            grid-template-columns: 10% 55% 35%;
+        }
+        #myaccdetail>div{
+            margin-top: 50px;
+            /* border: 2px solid blue; */
+            height: 100px;
+        }
+        #detail>#name{
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <div id="detail">
+        <h1>My account</h1>
+        <div id="logout">log out</div>
+
+        <div id="myaccdetail">
+            <div></div>
+            <div>
+                <h2>Order History</h2>
+                <h3>You haven't placed any orders yet.</h3>
+            </div>
+            <div>
+                <h2>Account details</h2>
+                <h3 id="name" style="margin-left: 5px;"></h3>
+                <h2>View addresses (0)</h2>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+    let userDetails=JSON.parse(localStorage.getItem("userDetail"));
+
+    let userName=userDetails.name;
+    console.log(userName)
+    document.getElementById("name").textContent=userName;
+
+    document.getElementById("logout").addEventListener("click",logout);
+
+    function logout(){
+        userDetails.login=false;
+        console.log(userDetails);
+        localStorage.setItem("userDetail",JSON.stringify(userDetails));
+        window.location.href="login.html";
+    }
+</script>
