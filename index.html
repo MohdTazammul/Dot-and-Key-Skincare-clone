@@ -14,7 +14,13 @@
 
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"> </script>
-    <style>
+   <!-- linking product csss file -->
+   <link rel="stylesheet" href="./CSS/product.css">
+
+   <!-- importing footer and header css files -->
+   <link rel="stylesheet" href="./CSS/footer.css">
+   <link rel="stylesheet" href="./CSS/nav.css">
+   <style>
     /* Make the image fully responsive */
     .carousel-inner img {
       width: 100%;
@@ -144,6 +150,7 @@
     </style>
 </head>
 <body>
+  <div id="nav-container"></div>
     <div>
         <div id="demo" class="carousel slide slider" data-ride="carousel">
 
@@ -249,5 +256,16 @@
           </div>
         </div>
     </div>
+    <div id="footer-container">
+
+    </div>
 </body>
 </html>
+<script type="module">
+  import  {navBar,popUp} from './JS/navbar.js';
+  document.getElementById("nav-container").innerHTML = navBar();
+  popUp();
+
+  import footer from './JS/footer.js';
+  document.getElementById("footer-container").innerHTML = footer();
+</script>
