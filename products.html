@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+
+    <!-- GOOGLE FONTS LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@500&family=Mochiy+Pop+One&family=Nanum+Myeongjo&family=Play&family=Red+Hat+Mono:wght@300&family=Roboto:wght@500&family=Rubik&family=Spartan:wght@200&display=swap" rel="stylesheet">
+    <style>
+        .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
+    #controls
+    {
+      background-color: grey;
+      border-radius:50%; 
+      width:11px;
+      height:10px;
+      margin-left: 5px;
+    }
+    .slider img
+    {
+      border-radius: 20px;
+    }
+    .SHOP-ALL
+    {
+        font-family: 'Roboto', sans-serif;
+        font-size: 45px;
+        text-align: center;
+        margin: 50px 0px;
+    }
+    #products-container
+    {
+        display: grid;
+        grid-template-columns: repeat(4, 23%);
+        justify-content: space-between;
+        width: 80%;
+        margin: auto;
+        margin-top: 30px;
+        gap: 30px;
+    }
+    .card{
+        border: none;
+        height: 420px;
+    }
+    .card:hover
+    {
+        cursor: pointer;
+    }
+    .card img
+    {
+        width: 100%;
+    }
+    .description
+    {
+        padding: 0px 10px;
+    }
+    .description .rating
+{
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+    .description .title
+{
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+.description .price
+{
+    line-height: 0.2;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+.description .price .orignal-price
+{
+  text-decoration: line-through;
+  color: rgb(177, 177, 177);
+}
+.description .price .sale-price
+{
+  margin-left: 10px;
+  color: #FF6781;
+}
+.card .discount
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #919191;
+  color: white;
+  font-size: 12px;
+  padding: 5px 15px;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+.card .discount
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #919191;
+  color: white;
+  font-size: 12px;
+  padding: 5px 15px;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+
+.card button{
+  width: 100%;
+  height: 30px;
+  background-color: #FF6781;
+  color: white;
+  border: none;
+  position: absolute;
+  bottom: 0;
+}
+.card button:hover
+{
+    background-color: #ff4665;
+}
+.filter-bar
+{
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0px;
+}
+.filter-bar > div{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    width: 40%;
+    margin: auto;
+}
+.filter-bar select
+{
+    text-align: center;
+    border: 2px solid black;
+    font-size: 20px;
+    height: 50px;
+    width: 48%;
+}
+    </style>
+</head>
+<body>
+    <div id="demo" class="carousel slide slider" data-ride="carousel">        
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/DESK-STAY-TUNED_-shop_261f6331-9e78-4384-894c-6ac40c08aff7.gif?v=1639463931"  width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Advent_desktop.gif?v=1638982580" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/watermelon_Desktop.png?v=1638982924" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/desk_home.png?v=1639033532" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/vit_c_Home_Page_DESKTOP_Banner_Size_snow_1.png?v=1639208432" width="1100" height="500">
+          </div>
+        </div>
+        
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span  style="color: black;  font-size: 34px;  margin-left: -50%;" aria-hidden="true"><span class="iconify" data-icon="ep:arrow-left-bold"></span></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span style="color: black;  font-size: 34px; margin-right: -50%;" aria-hidden="true"><span class="iconify" data-icon="ep:arrow-right-bold"></span></span>
+        </a>
+    </div> 
+    <div class="SHOP-ALL">
+        SHOP ALL
+    </div>
+    <div id="products-container">
+        
+    </div>
+    <div class="filter-bar">
+        <div>
+            <select>
+                <option>Filter</option>
+                <option>Acne Control</option>
+                <option>Clay Mask</option>
+                <option>Dark Sopts</option>
+                <option>Face Wash</option>
+                <option>Moisturizer</option>
+                <option>Serum and Oil</option>
+                <option>Skin Glow</option>  
+            </select>
+            <select>
+                <option>Featured</option>
+                <option>Alphabatically, A-Z</option>
+                <option>Alphabatically, Z-A</option>
+                <option>Price, low to high</option>
+                <option>Price, high to low</option>
+                <option>Rating, low to high</option>
+                <option>Rating, high to low</option>
+            </select>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var data = JSON.parse(localStorage.getItem("DotAndKeyProducts"));
+    var productsContainer = document.getElementById("products-container");
+    showData(data); 
+    function showData(data)
+    {
+        productsContainer.innerHTML = ""; 
+        data.forEach(item => {
+            var rating = "";
+            if(item.rating < 3.8 && item.rating >= 3.5)
+                rating = `
+                <span class="iconify" data-icon="openmoji:star"></span> 
+                <span class="iconify" data-icon="openmoji:star"></span> 
+                <span class="iconify" data-icon="openmoji:star"></span> 
+                <span class="iconify" data-icon="openmoji:star-with-right-half-black"></span>  
+                <span class="iconify" data-icon="openmoji:black-star"></span>`;
+                
+            else if(item.rating < 4.3 && item.rating >= 3.8)
+                rating = `
+                    <span class="iconify" data-icon="openmoji:star"></span> 
+                    <span class="iconify" data-icon="openmoji:star"></span> 
+                    <span class="iconify" data-icon="openmoji:star"></span> 
+                    <span class="iconify" data-icon="openmoji:star"></span> 
+                    <span class="iconify" data-icon="openmoji:black-star"></span>`;
+                
+            else if(item.rating < 4.8 && item.rating >= 4.3)
+                    rating = `
+                    <span class="iconify" data-icon="openmoji:star"></span> 
+                    <span class="iconify" data-icon="openmoji:star"></span> 
+                    <span class="iconify" data-icon="openmoji:star"></span> 
+                    <span class="iconify" data-icon="openmoji:star"></span> 
+                    <span class="iconify" data-icon="openmoji:star-with-right-half-black"></span>`;
+                
+            else if(item.rating <= 5 && item.rating >= 4.8)
+                    rating = `
+                    <span class="iconify" data-icon="openmoji:star"></span> 
+                    <span class="iconify" data-icon="openmoji:star"></span> 
+                    <span class="iconify" data-icon="openmoji:star"></span> 
+                    <span class="iconify" data-icon="openmoji:star"></span> 
+                    <span class="iconify" data-icon="openmoji:star"></span> `;
+
+                    var x=Math.floor((item.discount/100)*item.price)
+        x=item.price-x;
+        var orignalPrice;
+        if(item.discount != 0)
+        {
+            orignalPrice = `Rs: ${item.price}`;
+            var disc = `SAVE ${item.discount}%`;
+        }
+        else
+        {
+            orignalPrice = "";
+            var disc = "";
+        }
+            productsContainer.innerHTML += 
+            `
+            <div class="card">
+           <div onclick="redirectToIndividualProductPage('${item.id}')"> 
+            <img src="${item.images[0]}">
+            <div class="description">
+                <label class="rating">${rating} ${item.rating}/5</label>
+                <p class="title">${item.title}</p>
+                <p class="price"><span class="orignal-price">${orignalPrice}</span><span class="sale-price">Rs: ${x}</span></p>
+            </div>
+            <div class="discount">${disc}</div>
+           </div>
+           <button onclick="addToCart('${item.id}')">Add to Cart</button>
+        </div>
+            `
+        });
+    }
+
+    function redirectToIndividualProductPage(id)
+    {
+        // console.log("redirected id "+id);
+        window.location.href = `ProductDetails.html?${id}`;
+    }
+    function addToCart(id)
+    {
+        console.log(id);
+    }
+</script>
