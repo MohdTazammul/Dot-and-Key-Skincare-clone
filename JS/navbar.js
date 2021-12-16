@@ -74,6 +74,14 @@ function popUp(){
       navPopLeft.style.display="grid";
     }
   })
+
+  
+  let searchResult=document.getElementById("Search-input").addEventListener("keypress",function(e){
+    if(e.key=="Enter"){
+        let content=document.getElementById("Search-input").value;;
+        console.log(content)
+    }
+})
 }
 
 export {navBar,popUp}
