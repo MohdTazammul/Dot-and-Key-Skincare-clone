@@ -77,7 +77,7 @@
 // function to redirect the page to product details page
     function redirectToIndividualProductPage(id)
     {
-        window.location.href = `ProductDetails.html?${id}`;
+        window.location.href = `productDetail.html?${id}`;
     }
     
     // Working on filteration and sorting
