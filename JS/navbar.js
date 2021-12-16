@@ -20,7 +20,7 @@ function navBar(){
                 <span class="iconify span-search" data-icon="eva:search-outline"></span>
                 <input type="text" placeholder="Search" id="Search-input">
             </span>
-            <a href=""><span class="iconify bag-profile" id="bag" data-icon="teenyicons:bag-outline"></span></a>
+            <a href="cart.html"><span class="iconify bag-profile" id="bag" data-icon="teenyicons:bag-outline"></span></a>
             <a href=""></a><span id="profile" class="iconify bag-profile" data-icon="clarity:user-line"></span></a>
            </div>
         </div>
