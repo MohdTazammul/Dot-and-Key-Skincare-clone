@@ -419,16 +419,16 @@ data-flickity-options='{ "wrapAround": true }'>
         <div class="container">
           <div class="slider">
               <div class="owl-carousel" id="slider-container">
-                <div class="slider-card">
-                    <div class="d-flex justify-content-center align-items-center mb-4">
+                <div class="slider-card" >
+                    <div class="d-flex justify-content-center align-items-center mb-4" onclick="redirectToProductDetailsPage('DK0108')">
                       <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1-7_360x.jpg?v=1638975041" alt="" >
                     </div>
-                    <div class="description">
+                    <div class="description" onclick="redirectToProductDetailsPage('DK0108')">
                       <p class="rating"><span style="font-size: 16px; margin-top: -4px;" class="iconify" data-icon="noto:star"></span> 3.6/5</p>
                     <h5 class="title"><b>Superfood Skin Nourishing Face Oil</b></h5>
                     <p class="price"><span class="sale-price">Rs: 553.03</span></p>
                   </div>
-                    <button>Add to Cart</button>
+                    <button onclick="addToCart('${item.id}')">Add to Cart</button>
                   </div>					
               </div>
             </div>
@@ -686,3 +686,42 @@ data-flickity-options='{ "wrapAround": true }'>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
 	<script src="JS/owl caraousel 1.js"></script>
 	<script src="JS/owl caraousel 2.js"></script>
+
+  <script>
+    let item={};
+let userDetail=JSON.parse(localStorage.getItem("userDetail"));
+function addToCart(id){
+
+    console.log(id);
+    if(userDetail===null){
+        alert("you need to login first")
+    }else{
+    
+        item.email=userDetail.email;
+        
+        item.id=id;
+        // Adding size as defualt value. Because product page has no option se select size;
+        item.size = "Default";
+        
+            console.log()
+            let itemflag=false;
+            let cartArray=JSON.parse(localStorage.getItem("cartItem"))||[];
+            console.log(cartArray.size)
+            for(let i=0;i<cartArray.length;i++){
+                if(cartArray[i].id===item.id&&cartArray[i].size===item.size&&cartArray[i].email===item.email){
+                    //console.log("HEre")
+                    itemflag=true;
+                    break;
+                }
+            }
+            if(itemflag==true){
+                alert("item Alredy added")
+            }else{
+    
+                cartArray.push(item);
+                localStorage.setItem("cartItem",JSON.stringify(cartArray));
+            
+            }
+    }
+}
+  </script>
