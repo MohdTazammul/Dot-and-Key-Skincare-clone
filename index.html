@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"> </script>
+   <!-- linking product csss file -->
+   <link rel="stylesheet" href="./CSS/product.css">
+
+   <!-- importing footer and header css files -->
+   <link rel="stylesheet" href="./CSS/footer.css">
+   <link rel="stylesheet" href="./CSS/nav.css">
+   <style>
+    /* Make the image fully responsive */
+    .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
+    #controls
+    {
+      background-color: grey;
+      border-radius:50%; 
+      width:11px;
+      height:10px;
+      margin-left: 5px;
+    }
+    .slider img
+    {
+      border-radius: 20px;
+    }
+    .loved-by
+        {
+            margin: 80px 0px;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1;
+            color: #3C3C3C;
+        }
+        .loved-by p{
+            font-size: 28px;
+        }
+        .loved-by label
+        {
+            letter-spacing: 1px;
+            font-size: 40px;
+            font-weight: lighter;
+        }
+        .loved-by label span
+        {
+            font-style: italic;
+            font-weight: 600;
+        }
+        .gallery
+        {
+            width: 85%;
+            margin: auto;
+        }
+        .gallery-cell
+        {
+            width: 100%;
+        }
+        .gallery-cell img
+        {
+           border-radius: 30px;   
+        }
+        .bestseller
+        {
+          line-height: 0.5;
+        }
+        .bestseller p{
+          font-size: 18px;
+        }
+        .bestseller label span
+        {
+          font-weight: 900;
+          font-size: 30px !important;
+          color: black;
+        }
+        .top-pick
+        {
+          background-image: url("https://cdn.shopify.com/s/files/1/0361/8553/8692/files/14A-Influencers-desktop_7a40820d-508b-4379-9ae4-e399f7b40ef0.png?v=1638885965");
+          /* height: 500px; */
+          width: 100%;
+          background-size: cover;
+          height: 500px;
+        }
+        .top-pick .celebrities
+        {
+          display: flex;
+          width: 70%;
+          margin: auto;
+          padding-top: 15%;
+          justify-content: space-between;
+          text-align: center;
+          font-weight: bold;
+        }
+
+        .top-pick .celebrities > div{
+          width: 20%;
+        }
+        .top-pick .celebrities img
+        {
+          width: 75%;
+          height: 160px;
+        }
+        .top-pick .celebrities p{
+          color: #06706C;
+          font-style: italic;
+          line-height: 1.2;
+          font-size: 18px;
+          padding: 10px 0px;
+          width: 100px;
+          margin: auto;
+        }
+        .top-pick .celebrities label
+        {
+          color: #CE2028;
+          font-size: 14px;
+          font-weight: 700;
+          letter-spacing: 1px;
+        }
+        .favourites
+        {
+          margin: 120px 0px 20px 0px;
+        }
+        .favorites-products-gallery
+        {
+          width: 88%;
+          margin: auto;
+          display: flex;
+          row-gap: 10px;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+        .favorites-products-gallery img
+        {
+          width: 100%;
+          border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+  <div id="nav-container"></div>
+    <div>
+        <div id="demo" class="carousel slide slider" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators" style="margin-bottom:-30px;">
+              <li id="controls" data-target="#demo" data-slide-to="0" class="active"></li>
+              <li id="controls" data-target="#demo" data-slide-to="1"></li>
+              <li id="controls" data-target="#demo" data-slide-to="2"></li>
+              <li id="controls" data-target="#demo" data-slide-to="3"></li>
+              <li id="controls" data-target="#demo" data-slide-to="4"></li>
+            </ul>
+            
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/DESK-STAY-TUNED_-shop_261f6331-9e78-4384-894c-6ac40c08aff7.gif?v=1639463931"  width="1100" height="500">
+              </div>
+              <div class="carousel-item">
+                <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Advent_desktop.gif?v=1638982580" width="1100" height="500">
+              </div>
+              <div class="carousel-item">
+                <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/watermelon_Desktop.png?v=1638982924" width="1100" height="500">
+              </div>
+              <div class="carousel-item">
+                <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/desk_home.png?v=1639033532" width="1100" height="500">
+              </div>
+              <div class="carousel-item">
+                <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/vit_c_Home_Page_DESKTOP_Banner_Size_snow_1.png?v=1639208432" width="1100" height="500">
+              </div>
+            </div>
+            
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span  style="color: black;  font-size: 34px;  margin-left: -50%;" aria-hidden="true"><span class="iconify" data-icon="ep:arrow-left-bold"></span></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span style="color: black;  font-size: 34px; margin-right: -50%;" aria-hidden="true"><span class="iconify" data-icon="ep:arrow-right-bold"></span></span>
+            </a>
+        </div>    
+        <div class="loved-by">
+            <p>loved by</p>
+            <label>over <span>7 Lakh</span> customers</label>
+        </div> 
+        <div class="gallery js-flickity"
+    data-flickity-options='{ "wrapAround": true }'>
+    <div class="gallery-cell">
+      <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/ikwi-DESKTOP-banner-resize_5.gif?v=1639140458" width="100%" />
+    </div>
+    <div class="gallery-cell">
+     <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/5_in_1_desktop.jpg?v=1638981668" width="100%" />
+    </div>
+    <div class="gallery-cell">
+       <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/roller_desktop.jpg?v=1638982173" width="100%" />
+    </div>
+    <div class="gallery-cell">
+      <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Lip_Loving_desktop.jpg?v=1638981780" width="100%" />
+    </div>
+        </div>
+        <div class="loved-by bestseller">
+          <p>SHOP OUR</p>
+          <label><span>BESTSELLER</span></label>
+        </div>
+        <div class="top-pick">  
+          <div class="celebrities">
+            <div>
+              <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/unnamed_11.png?v=1639026965">
+              <p>Krystal's pick for</p>
+              <label>YOUTHFUL SKIN ></label>
+            </div>
+            <div>
+              <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Rectangle_688_2_bdee29d9-75fc-4833-a0dc-0e56195e0f46.png?v=1638996131">
+              <p>Jovita's pick for</p>
+              <label>ACNE FREE, CLEAR SKIN ></label>
+            </div>
+            <div>
+              <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Rectangle_687_2_52c22995-20c3-40f9-86c5-0545cf499c72.png?v=1638996082">
+              <p>Debasree's pick for</p>
+              <label>HYDRATED SKIN ></label>
+            </div>
+            <div>
+              <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Rectangle_686_2_c2db44db-4547-4f79-9806-ce3d2177ca1c.png?v=1638996196">
+              <p>Shreya's pick for</p>
+              <label>GLOWING SKIN ></label>
+            </div>
+          </div>
+        </div> 
+        <div class="loved-by bestseller favourites">
+          <p>SHOP</p>
+          <label><span>FAVOURITES</span></label>
+        </div>
+        <div class="favorites-products-gallery">
+          <div style="width: 37%;">
+            <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/top_pick.png?v=1638780571">
+          </div>
+          <div style="width: 62%;">
+            <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/new_arrivals_neww_snow_80b7d921-e4bb-4c1c-b3d2-2ab06da82c6b.png?v=1639033457">
+          </div>
+          <div style="width: 62%;">
+            <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/bodycare_snow_c11b58f3-21ff-4a16-a6d0-7d8c8c1e28a2.png?v=1639033442">
+          </div>
+          <div style="width: 37%;">
+            <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/merch_2.png?v=1638943917">
+          </div>
+        </div>
+    </div>
+    <div id="footer-container">
+
+    </div>
+</body>
+</html>
+<script type="module">
+  import  {navBar,popUp} from './JS/navbar.js';
+  document.getElementById("nav-container").innerHTML = navBar();
+  popUp();
+
+  import footer from './JS/footer.js';
+  document.getElementById("footer-container").innerHTML = footer();
+</script>
