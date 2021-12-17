@@ -1,12 +1,52 @@
 
-    var data = JSON.parse(localStorage.getItem("DotAndKeyProducts"));
     var productsContainer = document.getElementById("products-container");
+var data = [];
+var url = window.location.href;
+console.log(url);
+ var output= "";
+ var flag = false;
+ for(var i=url.length-1; i>=0 ;i--)
+     {
+         if(url[i] == "?")
+         {
+             flag = true
+             break;
+         }
+         else
+             output+=url[i];
+     }
+ output = output.split("").reverse().join("");
+ console.log("search input passed by navbar page "+output);
+ 
+if(flag)
+{
+    output = output.toLowerCase();
+
+    var rawData = JSON.parse(localStorage.getItem("DotAndKeyProducts"));
+    
+   rawData.forEach(item => {
+       if(item.title.toLowerCase().indexOf(output) != -1)
+           data.push(item);
+   })
+   showData(data);
+}
+else
+    data = JSON.parse(localStorage.getItem("DotAndKeyProducts"));
+    //console.log(arr);
+
+
 
     // show data function will display the product on the web page
     showData(data); 
     function showData(data)
     {
         productsContainer.innerHTML = ""; 
+        if(data.length == 0 || data==undefined || data == null)
+        {
+            productsContainer.innerHTML = `<h1>NO Product Found for this serach</h1>`;
+        }
+        else 
+        {
         // changing the stars according to rating
         data.forEach(item => {
             var rating = "";
@@ -73,6 +113,7 @@
         </div>
             `
         });
+    }
     }
 // function to redirect the page to product details page
     function redirectToIndividualProductPage(id)
