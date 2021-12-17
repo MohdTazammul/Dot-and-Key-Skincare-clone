@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shipping page</title>
+
+
+     <link rel="stylesheet" href="shipping.css">            
+
+</head>
+
+
+<body>
+
+    <div id = "shipping_container">
+
+        <!-- right side part -->
+        <div class = "shipping_box1">
+             
+
+            <!-- first part -->
+            <div class = "logo_checkout">
+                <img height="70px" src = "Dot_Key_Logo.png" alt = "">
+                <!-- <nav class = "nav1"> Cart > Information > Shopping > Payment</nav> -->
+                <div id = "options">
+                    <ul id = "list">
+                      <li>Cart</li>
+                      <li>Information</li>
+                      <li>Shopping</li>
+                      <li><a href="payment.html">Payment</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- second part -->
+            <div class = "shipping_info">
+  
+                <div class = "mail_info">
+                    <label for = "mail_id">Contact</label>
+                    <input type = "email" id = "mail_id">
+
+                    <button id = "shipping_info1">Change</button>
+
+                </div>
+                <hr>
+                <div class = "address_info_ship">
+                     
+                    <label for = "ship_to">Ship to</label>
+                    <input type = "text" id = "ship_to">
+            
+                    <button id = "shipping_info1">Change</button>
+
+                </div>
+
+            </div>
+
+            <!-- third part -->
+            <div class = "shipping_method">
+
+                <div>Shipping method</div>
+
+                <input type = "radio" id = "standard">
+                <label for = "standard">Standard (3-5 Business Days)</label>
+
+                <button id = "shipping_info1" style="color:black;">Free</button>
+            </div>
+
+            <!-- fourt part --> 
+            <div class = "buttons_click">
+                <button id = "return_to_info" style="border: none; background: transparent; color: red;">
+                    < Return to information</button>
+
+                <button id ="continue_to_pay" style="background-color: #545454;border-radius: 5px;">
+                    Continue to payment</button>
+            </div>
+        </div>
+
+        <div class = "shipping_box2"></div>
+    </div>
+    
+</body>
+
+
+</html>
+
+<script src = "shipping.js"></script>
