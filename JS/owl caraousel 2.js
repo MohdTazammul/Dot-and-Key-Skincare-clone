@@ -44,11 +44,11 @@ data.forEach(item => {
         }
         main.innerHTML += 
         `
-        <div class="slider-card">
-                    <div class="d-flex justify-content-center align-items-center mb-4">
+        <div class="slider-card" >
+                    <div class="d-flex justify-content-center align-items-center mb-4" onclick="redirectToProductDetailsPage('${item.id}')">
                         <img src="${item.images[0]}" alt="" >
                     </div>
-                    <div class="description">
+                    <div class="description" onclick="redirectToProductDetailsPage('${item.id}')">
                         <p class="rating"><span style="font-size: 16px; margin-top: -4px;" class="iconify" data-icon="noto:star"></span> ${item.rating}/5</p>
                         <h5 class="title"><b>${item.title}</b></h5>
                         <p class="price"><span class="orignal-price">${orignalPrice}</span><span class="sale-price">Rs: ${x}</span></p>
@@ -56,9 +56,14 @@ data.forEach(item => {
                     <div class="discount">
                         ${disc}
                         </div>
-                        <button>Add to Cart</button>
+                        <button onclick="addToCart('${item.id}')">Add to Cart</button>
                 </div>
         `
     }
         count++
 })
+
+function redirectToProductDetailsPage(id)
+{
+    window.location.href = `productDetail.html?${id}`;
+}
