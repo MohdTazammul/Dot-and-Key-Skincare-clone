@@ -56,7 +56,7 @@
 
     let userDetails=JSON.parse(localStorage.getItem("userDetail"));
     console.log(userDetails)
-    if(userDetails==null|userDetails==undefined||userDetails.login==false){
+    if(userDetails==null||userDetails==undefined||userDetails.login==false){
         window.location.href="login.html"
     }
     let userName=userDetails.name;
