@@ -40,6 +40,7 @@
     function Register(){
         let detail={
                 name:document.getElementById("name").value,
+                lastName : document.getElementById("lastName").value,
                 email:document.getElementById("email").value,
                 password:document.getElementById("password").value,
                 username:document.getElementById("email").value,

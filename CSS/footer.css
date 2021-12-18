@@ -12,6 +12,8 @@ grid-template-columns: auto auto auto;
 }
 .footerTitle{
 color:#3c3c3c;
+letter-spacing: 2px;
+font-size: 24px;
 }
 .footerContent{
 color:#858578;
@@ -22,8 +24,9 @@ letter-spacing: 2px;
 }
 
 #footBox button{
-width:100px;
+width:120px;
 height:50px;
+margin-left: 20px;
 background-color: #3c3c3c;
 color:white;
 }

@@ -7,6 +7,12 @@ body {
 #container_checkout {
     margin-top: 5%;
     height: 800px;
+    margin-bottom: 60px;
+}
+
+#container_checkout input
+{
+    padding-left: 20px;
 }
 
 .checkout_box1 {
@@ -199,6 +205,7 @@ margin-right: 2%;
      margin-top: 10px;
  }
  #return_to_cart {
+     line-height: 3;
      color:#ff6781;
      border: none;
      cursor: pointer;
@@ -244,6 +251,7 @@ margin-right: 2%;
     text-decoration: none;
     color: #ff6781;
     transition: color 0.2s ease-in-out;
+    line-height: 5;
   }
 
 

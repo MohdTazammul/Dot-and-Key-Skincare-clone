@@ -91,13 +91,18 @@ function pinkDot(){
     let cartBag=JSON.parse(localStorage.getItem("cartItem"));
     let userDetails=JSON.parse(localStorage.getItem("userDetail"));
     console.log(userDetails)
-    if(cartBag.length!=0&&userDetails.login!=false){
+    if(cartBag != undefined && cartBag != null)
+    {
+        
+        if(cartBag.length!=0&&userDetails.login!=false){
 
             console.log("cart here")
-            pinked.style.display=sel;
+            pinked.style.display="sel";
     }else{
         pinked.style.display="none"
     
     }
+    }
+
 }
 export {navBar,popUp}

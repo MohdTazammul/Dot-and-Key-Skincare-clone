@@ -6,7 +6,7 @@
     }
     let userName=userDetails.name;
     console.log(userName)
-    document.getElementById("name").textContent=userName;
+    document.getElementById("name").textContent=userName+" "+userDetails.lastName;
 
     document.getElementById("logout").addEventListener("click",logout);
 

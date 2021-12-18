@@ -74,6 +74,7 @@
                 let user={
                     login:true,
                     name:item.name,
+                    lastName: item.lastName,
                     email:item.email,
                 }
                 console.log(user)

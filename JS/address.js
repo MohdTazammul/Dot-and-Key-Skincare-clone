@@ -88,12 +88,12 @@ cartBag.map((item)=>{
 
    divimg.append(nodiv,img)
    let price=document.createElement("h5");
-   price.textContent=x[0].price;
+   price.innerHTML= `&#8377; ${x[0].price}`;
    div.append(divimg,name,price);
    //div.innerHTML="asdsd"
    cartDiv.append(div)
    
 })
-document.getElementById("subtotal").textContent=`Subtotal. Rs-${totalAmount}`
-document.getElementById("total").textContent=`Total Rs-${totalAmount}`
+document.getElementById("subtotal").innerHTML=`Subtotal. Rs. &#8377;${totalAmount}`
+document.getElementById("total").innerHTML=`Total Rs. &#8377;${totalAmount}`
 //console.log(totalAmount);
