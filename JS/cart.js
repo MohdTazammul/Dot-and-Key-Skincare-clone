@@ -209,7 +209,12 @@ function showItem() {
 
 ///check out button which redirect userto check out page
 document.getElementById("checkout").addEventListener("click", () => {
-  window.location.href = "address.html";
+  let x = JSON.parse(localStorage.getItem("cartItem")) || [];
+  if(x.length==0){
+    alert("There is no Product in cart");
+  }else{
+    window.location.href = "address.html";
+  }
 });
 
 ////cart update button which update the cart page

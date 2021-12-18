@@ -188,7 +188,7 @@ let userDetail=JSON.parse(localStorage.getItem("userDetail"));
 //console.log(userDetail)
 document.getElementById("addToCartBtn").addEventListener("click",()=>{
 
-if(userDetail===null){
+if(userDetail===null||userDetail.login===false){
     //console.log("heer")
     alert("you need to login first")
 }else{

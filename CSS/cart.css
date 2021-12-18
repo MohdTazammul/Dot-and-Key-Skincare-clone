@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 body
 {
     margin: 0;
     padding: 0;
+=======
+body{
+    margin: 0px;
+    padding: 0px;
+>>>>>>> 6766813454fa47e5989bf5ba8494e22553b13bd9
 }
 #cart-container{
     width: 80%;;
