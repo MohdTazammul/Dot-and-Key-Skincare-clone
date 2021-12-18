@@ -94,6 +94,6 @@ cartBag.map((item)=>{
    cartDiv.append(div)
    
 })
-document.getElementById("subtotal").innerHTML=`Subtotal. Rs. &#8377;${totalAmount}`
-document.getElementById("total").innerHTML=`Total Rs. &#8377;${totalAmount}`
+document.getElementById("subtotal").innerHTML=`Subtotal. Rs. &#8377;${totalAmount.toFixed(2)}`
+document.getElementById("total").innerHTML=`Total Rs. &#8377;${totalAmount.toFixed(2)}`
 //console.log(totalAmount);

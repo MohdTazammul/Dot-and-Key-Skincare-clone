@@ -40,8 +40,8 @@ cartBag.map((item) => {
     cartDiv.append(div)
 
 })
-document.getElementById("subtotal").textContent = `Subtotal. Rs. ${totalAmount}`
-document.getElementById("total").textContent = `Total Rs. ${totalAmount}`
+document.getElementById("subtotal").textContent = `Subtotal. Rs. ${totalAmount.toFixed(2)}`
+document.getElementById("total").textContent = `Total Rs. ${totalAmount.toFixed(2)}`
 let add = JSON.parse(localStorage.getItem("addAddress"))
 console.log(add)
 

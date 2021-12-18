@@ -1,3 +1,7 @@
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #3C3C3C;
+}
 body
 {
     margin:0;
@@ -17,6 +21,14 @@ body
     font-weight: bolder;
     font-size: 20px;
     cursor: pointer;
+    border:1px solid #3C3C3C;
+    text-align: center;
+    height: 30px;
+    border-radius: 5px;
+}
+#logout:hover{
+    background-color: #3C3C3C;
+    color: white;
 }
 #myaccdetail{
     display: grid;
@@ -29,4 +41,8 @@ body
 }
 #detail>#name{
     font-weight: normal;
+}
+#pinked{
+    
+    margin-top: 25px;
 }
