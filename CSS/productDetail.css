@@ -33,8 +33,9 @@ body{
 #smallimg{
     display: flex;
     flex-direction: column;
-    height: 500px;
+    height: auto;
     overflow: scroll;
+    overflow: hidden;
 }
 #bigimg>img{
     width: 100%;
@@ -153,4 +154,45 @@ li{
 {
     color: #FE506E;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+@media (max-width:1024px){
+    .perks-to-love {
+       
+        margin-top: 0px;
+       
+    }
+    #title{
+        font-size: 16px;
+    }
+    #divpri h3{
+        font-size: 6px;
+    }
+    #decsrp ul li{
+        font-size: 14px;
+    }
+    .perks-to-love ul li{
+        font-size: 14px;
+
+    }
+    #ratings span{
+        font-size: 14px;
+    }
+    .sizetoggel{
+       width: 20%;
+       font-size: 12px;
+    }
+    #addToCartBtn{
+        width: 50% !important;
+    }
+}
+@media (max-width:770px){
+    #prodcont{
+        display: grid;
+        grid-template-columns: auto;
+        width: 95%;
+        margin: auto;
+    }
 }
