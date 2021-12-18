@@ -206,7 +206,7 @@ function showItem() {
 
 ///check out button which redirect userto check out page
 document.getElementById("checkout").addEventListener("click", () => {
-  window.location.href = "checkout.html";
+  window.location.href = "address.html";
 });
 
 ////cart update button which update the cart page
