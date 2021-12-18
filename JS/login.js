@@ -63,27 +63,58 @@
     function login(){
         username=document.getElementById("username").value
         password=document.getElementById("password").value
-        let flag=true;
-        let userBag=JSON.parse(localStorage.getItem("userArray"));
-        console.log(userBag);
-        if(userBag.length==0){
-            document.getElementById("error").textContent=`You need to SignUp first`
-        }
-        userBag.map((item)=>{
-            if(item.username==username&&item.password==password){
-                let user={
-                    login:true,
-                    name:item.name,
-                    lastName: item.lastName,
-                    email:item.email,
-                }
-                console.log(user)
-                localStorage.setItem("userDetail",JSON.stringify(user))
-                window.location.href="index.html"
-                flag=false;
-            }
-        })
-        if(flag==true){
-            document.getElementById("error").textContent=`Invalid User credentials`
-        }
+        // let flag=true;
+        let userBag=JSON.parse(localStorage.getItem("userArray")) || [];
+        var flag=false;
+        if(username == "" || password == "")
+             myFunction(`<span class="iconify" data-icon="bx:bxs-error" style="color: maroon; font-size: 22px;"></span> &nbsp; All fields are Mandatory`, false);
+       
+        else
+        {
+            userBag.map((item)=>{
+                if(item.username==username&&item.password==password){
+                 let user={
+               login:true,
+               name:item.name,
+               lastName: item.lastName,
+               email:item.email,
+           }
+           console.log(user)
+           localStorage.setItem("userDetail",JSON.stringify(user))
+           window.location.href="index.html";
+           
+           flag = true;
+       }
+      
+   })
+
+   
+}
+   
+if(!flag)
+myFunction(`<span class="iconify" data-icon="bx:bxs-error" style="color: maroon; font-size: 22px;"></span> &nbsp; Invalid User Credentials`, false);
+}
+function myFunction(msg, type) {
+    var popup = document.getElementById("myPopup");
+    popup.innerHTML = msg;
+    if(type)
+    {
+        popup.style.color="#3C763D";
+        popup.style.backgroundColor = "#DFF0D8"; 
+        popup.style.border = "2px solid #3C763D";
     }
+    else
+    {
+        popup.style.color="maroon";
+        popup.style.backgroundColor = "#F2DEDE"; 
+        popup.style.border = "2px solid maroon";
+    }
+    popup.classList.toggle("show");
+
+    const myTimeout = setTimeout(myGreeting, 3000);
+    
+    function myGreeting() {
+   popup.classList.toggle("show");
+  }
+    
+  }

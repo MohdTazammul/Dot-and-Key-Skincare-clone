@@ -43,15 +43,61 @@
                 lastName : document.getElementById("lastName").value,
                 email:document.getElementById("email").value,
                 password:document.getElementById("password").value,
-                username:document.getElementById("email").value,
-                mobile:" ",
-                description:" "
+                username:document.getElementById("email").value
             };
             console.log(detail)
-    
+            
+            if(detail.email =="" || detail.lastName == "" || detail.name == "" || detail.password == "")
+                 myFunction(`<span class="iconify" data-icon="bx:bxs-error" style="color: maroon; font-size: 22px;"></span> &nbsp; All fields are mandatory`, false);
+
+                else
+                {
             let userBag=JSON.parse(localStorage.getItem("userArray"))||[];
-            userBag.push(detail);
-            localStorage.setItem("userArray",JSON.stringify(userBag));
-            window.location.href="login.html"
+            
+            var flag=false;
+            userBag.forEach(el => {
+                if(el.email == detail.email)
+                   {
+                         flag= true;
+                   }
+            });
+
+            if(flag)
+            {
+                myFunction(`<span class="iconify" data-icon="bx:bxs-error" style="color: maroon; font-size: 22px;"></span> &nbsp; This Email ID already exists`, false);
+            }
+            else
+            {
+                localStorage.setItem("userArray",JSON.stringify(userBag));
+                myFunction(`<span class="iconify" data-icon="teenyicons:tick-circle-solid" style="color: #3c763d; font-size: 22px;"></span> &nbsp; Your account is created`, true, 1);
+                userBag.push(detail);
+            }
+        }
     }
     
+    function myFunction(msg, type, n=0) {
+        var popup = document.getElementById("myPopup");
+        popup.innerHTML = msg;
+        if(type)
+        {
+            popup.style.color="#3C763D";
+            popup.style.backgroundColor = "#DFF0D8"; 
+            popup.style.border = "2px solid #3C763D";
+        }
+        else
+        {
+            popup.style.color="maroon";
+            popup.style.backgroundColor = "#F2DEDE"; 
+            popup.style.border = "2px solid maroon";
+        }
+        popup.classList.toggle("show");
+    
+        const myTimeout = setTimeout(myGreeting, 2000);
+        
+        function myGreeting() {
+       popup.classList.toggle("show");
+       if(n==1)
+            window.location.href = "login.html";
+      }
+        
+      }
