@@ -12,6 +12,8 @@
   }
   .slider{
       margin-top: 210px;
+      position: relative;
+      z-index: -1;
   }
   .slider img
   {
@@ -116,6 +118,7 @@ color: white;
 border: none;
 position: absolute;
 bottom: 0;
+outline: none;
 }
 .card button:hover
 {
@@ -143,4 +146,35 @@ bottom: 0;
   font-size: 20px;
   height: 50px;
   width: 48%;
+}
+
+/* The actual popup */
+.popuptext {
+  visibility: hidden;
+  width: auto;
+  border-left: 10px solid#97d36b;
+  background-color: white;
+  color: black;
+  font-weight: bold ;
+  text-align: center;
+  padding: 8px 10px;
+  position: fixed;
+  z-index: 1;
+  top: 200px;
+  left: 50%;
+  margin-left: -80px;
+}
+
+
+
+/* Toggle this class - hide and show the popup */
+.show {
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
 }

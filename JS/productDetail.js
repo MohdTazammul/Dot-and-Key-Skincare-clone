@@ -131,6 +131,8 @@ var rating = "";
                 <span class="iconify" data-icon="openmoji:star"></span> 
                 <span class="iconify" data-icon="openmoji:star"></span> 
                 <span class="iconify" data-icon="openmoji:star"></span> `;
+        
+                rating+=` &nbsp;&nbsp; <span>(${obj.rating}/5)</span>`
 
 
 let ratingdiv=document.getElementById("ratings")
@@ -173,10 +175,10 @@ if(heartFlag==false){
     heartFlag=true;
    // document.getElementById("heart").innerHTML=`<span id="heart" style="font-size: 47px;">&#x2764;</span>`
    // document.getElementById("heart").innerHTML=`<span class="iconify" data-icon="bi:heart"></span>`
-   document.getElementById("blow").innerHTML=`<span class="iconify" data-icon="ant-design:heart-filled" style="font-size:55px"></span>`
+   document.getElementById("blow").innerHTML=`<span class="iconify" data-icon="ant-design:heart-filled" style="font-size:40px; color : #3C3C3C;  margin-top: 10px;"></span>`
 }else{
     //document.getElementById("blow").innerHTML=`<span id="heart" >&#x2661;</span>`
-    document.getElementById("blow").innerHTML=`<span class="iconify" data-icon="ant-design:heart-outlined" style="font-size:55px"></span>`
+    document.getElementById("blow").innerHTML=`<span class="iconify" data-icon="ant-design:heart-outlined" style="font-size:40px; color: #3C3C3C; margin-top: 10px;"></span>`
     heartFlag=false;
 }
 }

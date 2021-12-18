@@ -1,9 +1,7 @@
 function navBar(){
     return ` <!-- the main container of navbar -->
     <div id="nav">
-    <div class="grey-line">
 
-    </div>
     <div class="nav-bar-cont"  >
         <div class="bar">
             <div id="bar-icon-id" style="display:inline-block;">
@@ -17,12 +15,13 @@ function navBar(){
         <div class="search">
            <div>
             <span class="search-box">
-                <span class="iconify span-search" data-icon="eva:search-outline"></span>
+                <span class="iconify span-search" data-icon="ant-design:search-outlined"></span>
+             
                 <input type="text" placeholder="Search" id="Search-input">
             </span>
             <div id="pinked"></div>
             <a href="cart.html"><span class="iconify bag-profile" id="bag" data-icon="teenyicons:bag-outline"></span></a>
-            <a href="userProfile.html"><span id="profile" class="iconify bag-profile" data-icon="clarity:user-line"></span></a>
+            <a href="userProfile.html"><span  style="font-size:30px;" id="profile" class="iconify bag-profile" data-icon="clarity:user-line"></span></a>
            </div>
         </div>
     </div>

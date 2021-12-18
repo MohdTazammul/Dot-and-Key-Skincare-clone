@@ -43,7 +43,10 @@ else
         productsContainer.innerHTML = ""; 
         if(data.length == 0 || data==undefined || data == null)
         {
-            productsContainer.innerHTML = `<h1>NO Product Found for this serach</h1>`;
+            productsContainer.innerHTML = `<hr><h2>NO Product Found for this serach !!!</h2><hr>`;
+            productsContainer.style.display = "block";
+            productsContainer.style.marginBottom = "100px";
+            productsContainer.style.textAlign = "center";
         }
         else 
         {
@@ -88,7 +91,7 @@ else
         var orignalPrice;
         if(item.discount != 0)
         {
-            orignalPrice = `Rs: ${item.price}`;
+            orignalPrice = `Rs. ${item.price}`;
             var disc = `SAVE ${item.discount}%`;
         }
         else
@@ -259,10 +262,22 @@ function addToCart(id){
             if(itemflag==true){
                 alert("item Alredy added")
             }else{
-    
+                myFunction();
                 cartArray.push(item);
                 localStorage.setItem("cartItem",JSON.stringify(cartArray));
             
             }
     }
 }
+
+// for pop up alert
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+   popup.classList.toggle("show");
+    const myTimeout = setTimeout(myGreeting, 3000);
+    
+    function myGreeting() {
+   popup.classList.toggle("show");
+  }
+    
+  }
