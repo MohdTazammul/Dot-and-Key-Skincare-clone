@@ -7,9 +7,12 @@
     <title>Signup</title>
    <link rel="stylesheet" href="./CSS/loginsignup.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+   <link rel="stylesheet" href="./CSS/footer.css">
+   <link rel="stylesheet" href="./CSS/nav.css">
+   <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
 </head>
 <body>
+    <div id="nav-container"></div>
     <div id="login">
         <h1>Create Account</h1>
         <!-- <div id="fb"><h2>Facebook Signup</h2></div>
@@ -51,63 +54,18 @@
            <h1> Create</h1>
         </div>
     </div>
+    <div id="footer-container">
+
+    </div>
 </body>
 </html>
-<script>
-    //     async function Register() {
-    //     let url=`https://masai-api-mocker.herokuapp.com/auth/register`
-    //     let detail={
-    //         name:document.getElementById("name").value,
-    //         email:document.getElementById("email").value,
-    //         password:document.getElementById("password").value,
-    //         username:document.getElementById("email").value,
-    //         mobile:" ",
-    //         description:" "
-    //     };
-    //     console.log(detail)
-    //     detail=JSON.stringify(detail)
+<script type="module">
+    import  {navBar,popUp} from './JS/navbar.js';
+    document.getElementById("nav-container").innerHTML = navBar();
+    popUp();
 
-    //     let res= await fetch(url,{
-    //         method:"POST",
-
-    //         body:detail,
-
-    //         headers:{
-    //             "Content-Type":"application/json"
-    //         },
-
-
-
-    //     });
-
-    //     let data=await res.json();
-
-    //     console.log(data)
-    //     if(data.error==false){
-
-    //         window.location.href="login.html";
-    //     }else{
-    //             document.getElementById("error").textContent=data.message;
-    //     }
-    // }
-
-
-
-    function Register(){
-    let detail={
-            name:document.getElementById("name").value,
-            email:document.getElementById("email").value,
-            password:document.getElementById("password").value,
-            username:document.getElementById("email").value,
-            mobile:" ",
-            description:" "
-        };
-        console.log(detail)
-
-        let userBag=JSON.parse(localStorage.getItem("userArray"))||[];
-        userBag.push(detail);
-        localStorage.setItem("userArray",JSON.stringify(userBag));
-        window.location.href="login.html"
-}
-
+    import footer from './JS/footer.js';
+    console.log(footer)
+    document.getElementById("footer-container").innerHTML = footer();
 </script>
+<script src="./JS/signup.js"></script>

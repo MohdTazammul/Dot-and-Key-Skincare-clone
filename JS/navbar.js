@@ -44,8 +44,8 @@ function navBar(){
                 <a href="" class="navPopAnchor"><h4>GIFT, WITH LOVE</h4></a>
                 <a href="" class="navPopAnchor"><h4>IKWI NUTRITION</h4></a>
                 <a href="" class="navPopAnchor"><h4>KNOW US BETTER</h4></a>
-                <a href="" class="navPopAnchor"><h4>PROFILE</h4></a>
-                <a href="" class="navPopAnchor"><h4>LOG IN</h4></a>
+                <a href="userProfile.html" class="navPopAnchor"><h4>PROFILE</h4></a>
+                <a href="login.html" class="navPopAnchor"><h4>LOG IN</h4></a>
             </div>
             
             <div id="navPopLeft-Right">

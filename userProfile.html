@@ -5,33 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #detail>h1{
-            text-align: center;
-        }
-        #logout{
-            width: 80px;
-            /* border: 1px solid red; */
-            margin: auto;
-            font-weight: bolder;
-            font-size: 20px;
-            cursor: pointer;
-        }
-        #myaccdetail{
-            display: grid;
-            grid-template-columns: 10% 55% 35%;
-        }
-        #myaccdetail>div{
-            margin-top: 50px;
-            /* border: 2px solid blue; */
-            height: 100px;
-        }
-        #detail>#name{
-            font-weight: normal;
-        }
-    </style>
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/nav.css">
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+   <link rel="stylesheet" href="./CSS/userProfile.css">
 </head>
 <body>
+    <div id="nav-container"></div>
     <div id="detail">
         <h1>My account</h1>
         <div id="logout">log out</div>
@@ -49,27 +29,18 @@
             </div>
         </div>
     </div>
+    <div id="footer-container">
 
+    </div>
 </body>
 </html>
-<script>
+<script type="module">
+    import  {navBar,popUp} from './JS/navbar.js';
+    document.getElementById("nav-container").innerHTML = navBar();
+    popUp();
 
-    let userDetails=JSON.parse(localStorage.getItem("userDetail"));
-    console.log(userDetails)
-    if(userDetails==null||userDetails==undefined||userDetails.login==false){
-        window.location.href="login.html"
-    }
-    let userName=userDetails.name;
-    console.log(userName)
-    document.getElementById("name").textContent=userName;
-
-    document.getElementById("logout").addEventListener("click",logout);
-
-    function logout(){
-        userDetails.login=false;
-        console.log(userDetails);
-        //localStorage.removeItem("userDetail")
-        localStorage.setItem("userDetail",JSON.stringify(userDetails));
-        window.location.href="login.html";
-    }
+    import footer from './JS/footer.js';
+    console.log(footer)
+    document.getElementById("footer-container").innerHTML = footer();
 </script>
+<script src="./JS/userProfile.js"></script>

@@ -3,9 +3,11 @@
 }
 #login{
     /* border: 2px solid red; */
+    margin-top: 230px !important;
     width: 35%;
     margin: auto;
     font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 200px !important;
 }
 #login>h1{
     text-align: center;
@@ -99,6 +101,9 @@
 #error{
     color: red;
     text-align: center
+}
+#pinked{
+    display: none !important;
 }
 @media (min-width:600px) and (max-width:1000px){
     #login{
