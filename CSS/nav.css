@@ -17,9 +17,7 @@
     grid-template-columns: 40% 20% 40%;
     justify-content: space-around;
 }
-.nav-bar-cont > div{
-    /* height: 100px; */
-}
+
 .bar
 {
     padding-left: 120px;
@@ -101,4 +99,15 @@
     font-weight: normal;
     text-decoration: none; 
     color: black;         
+}
+#pinked{
+    width: 15px;
+    height: 15px;
+    background-color: #FF6781;
+    display: inline-block;
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 34px;
+    border-radius: 50%;
+    /* display: none; */
 }

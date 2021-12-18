@@ -73,6 +73,7 @@ function showItem() {
 
         ///main div
         let div = document.createElement("div");
+       
 
         //image div
         let imgDiv = document.createElement("div");
@@ -156,7 +157,7 @@ function showItem() {
           x = x.toFixed(2);
           //console.log(x,y)
           //console.log(x)
-          amountDiv.textContent = `RS- ${x}`;
+          amountDiv.textContent = `RS. ${x}`;
           //subtotal(userCart ,index,num);
           document.getElementById(
             "subtotal"
@@ -177,8 +178,10 @@ function showItem() {
         totalAmount += x;
         x = x.toFixed(2);
         //console.log(x)
-        amountDiv.textContent = `RS- ${x}`;
-
+        amountDiv.textContent = `RS. ${x}`;
+        imgDiv.addEventListener("click",  () => {
+          window.location.href = `productDetail.html?${prod[0].id}`;
+        })
         //// appending all the div to the main contaier
         div.append(imgDiv, titleBtnDiv, QuentityDiv, span, amountDiv);
         //// appending all the div to the contaier of product
@@ -206,7 +209,7 @@ function showItem() {
 
 ///check out button which redirect userto check out page
 document.getElementById("checkout").addEventListener("click", () => {
-  window.location.href = "checkout.html";
+  window.location.href = "address.html";
 });
 
 ////cart update button which update the cart page
