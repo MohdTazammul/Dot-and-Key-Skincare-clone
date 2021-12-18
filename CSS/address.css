@@ -12,9 +12,13 @@ body {
     margin-bottom: 60px;
 }
 
-#container_checkout input
+#container_checkout input, #container_checkout select
 {
-    padding-left: 20px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
 }
 
 .checkout_box1 {
@@ -31,16 +35,7 @@ body {
     text-align: center;
 }
 
-#options {
-width: 75%;
-/* text-align: center; */
-font-size: 0.8571428571em;
-color: black;
-text-decoration: none;
-font-family: Lato, sans-serif;
-margin-left: 70px;
-/* color: #ff6781; */
- }
+
 
 #list li {
 display: inline;
@@ -178,8 +173,6 @@ margin-right: 2%;
      width: 90%;
      text-align: start;
      font-size: 14px;
-     color: #333333;
-     border-color: #d9d9d9;
      border-radius: 5px;
      box-sizing: border-box;
      display: flex;
@@ -188,8 +181,8 @@ margin-right: 2%;
      padding: 0.9285714286em 0.7857142857em; */
      padding-top: 5px;
  }
- #ip_city>input {
-    width: 30%;
+ .ip_city>input {
+    width: 30%  ;
      height: 50px;
  }
  #save_info {
