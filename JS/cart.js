@@ -98,7 +98,7 @@ function showItem() {
           //console.log(index)
           cartBag.splice(index, 1);
           localStorage.setItem("cartItem", JSON.stringify(cartBag));
-
+          myFunction(`<span class="iconify" data-icon="teenyicons:tick-circle-solid" style="color: #3c763d; font-size: 22px;"></span> &nbsp; Item removed`, true);
           //recalling the function to show the updated data.
           showItem();
         });
@@ -211,7 +211,7 @@ function showItem() {
 document.getElementById("checkout").addEventListener("click", () => {
   let x = JSON.parse(localStorage.getItem("cartItem")) || [];
   if(x.length==0){
-    alert("There is no Product in cart");
+    myFunction(`<span class="iconify" data-icon="bx:bxs-error" style="color: maroon; font-size: 22px;"></span> &nbsp; There is no product in cart to checkout`, false);
   }else{
     window.location.href = "address.html";
   }
@@ -221,3 +221,30 @@ document.getElementById("checkout").addEventListener("click", () => {
 document.getElementById("updatecart").addEventListener("click", () => {
   window.location.href = "cart.html";
 });
+
+
+
+function myFunction(msg, type) {
+  var popup = document.getElementById("myPopup");
+  popup.innerHTML = msg;
+  if(type)
+  {
+      popup.style.color="#3C763D";
+      popup.style.backgroundColor = "#DFF0D8"; 
+      popup.style.border = "2px solid #3C763D";
+  }
+  else
+  {
+      popup.style.color="maroon";
+      popup.style.backgroundColor = "#F2DEDE"; 
+      popup.style.border = "2px solid maroon";
+  }
+  popup.classList.toggle("show");
+
+  const myTimeout = setTimeout(myGreeting, 3000);
+  
+  function myGreeting() {
+ popup.classList.toggle("show");
+}
+  
+}

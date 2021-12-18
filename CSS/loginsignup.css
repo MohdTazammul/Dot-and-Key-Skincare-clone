@@ -137,29 +137,3 @@ body{
     }
 }
 
-/* The actual popup */
-.popuptext {
-    visibility: hidden;
-    width: auto;
-    font-weight: bold ;
-    text-align: center;
-    padding: 8px 10px;
-    position: fixed;
-    border-radius: 5px;
-    z-index: 1;
-    top: 200px;
-    left: 50%;
-    margin-left: -80px;
-  }
-  
-  /* Toggle this class - hide and show the popup */
-  .show {
-    visibility: visible;
-    animation: fadeIn 1s;
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
-  

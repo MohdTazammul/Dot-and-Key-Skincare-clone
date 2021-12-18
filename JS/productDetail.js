@@ -182,7 +182,7 @@ if(heartFlag==false){
     heartFlag=false;
 }
 }
-let iitem={};
+let item={};
 sizeAdded(obj.size[0]);
 let userDetail=JSON.parse(localStorage.getItem("userDetail"));
 //console.log(userDetail)
@@ -190,38 +190,64 @@ document.getElementById("addToCartBtn").addEventListener("click",()=>{
 
 if(userDetail===null||userDetail.login===false){
     //console.log("heer")
-    alert("you need to login first")
+    myFunction(`<span class="iconify" data-icon="bx:bxs-error" style="color: maroon; font-size: 22px;"></span> &nbsp; You need to login first`, false);
 }else{
 
-    iitem.email=userDetail.email;
+    item.email=userDetail.email;
     
-    iitem.id=obj.id;
+    item.id=obj.id;
    
    
     
         //console.log()
         let itemflag=false;
         let cartArray=JSON.parse(localStorage.getItem("cartItem"))||[];
-        console.log(iitem.size)
+        console.log(item.size)
         for(let i=0;i<cartArray.length;i++){
             //console.log(cartArray[i].size)
-            if(cartArray[i].id===obj.id&&cartArray[i].size===iitem.size&&cartArray[i].email===iitem.email){
+            if(cartArray[i].id===obj.id&&cartArray[i].size===item.size&&cartArray[i].email===item.email){
                 //console.log("HEre")
                 itemflag=true;
                 break;
             }
         }
         if(itemflag==true){
-            alert("item Alredy added")
+            myFunction(`<span class="iconify" data-icon="bx:bxs-error" style="color: maroon; font-size: 22px;"></span> &nbsp; This item is already in cart`, false);
         }else{
 
-            cartArray.push(iitem);
+            myFunction(`<span class="iconify" data-icon="teenyicons:tick-circle-solid" style="color: #3c763d; font-size: 22px;"></span> &nbsp; Item added to cart Successfully`, true);
+            cartArray.push(item);
             localStorage.setItem("cartItem",JSON.stringify(cartArray));
         
         }
 }
 })
-function sizeAdded(siz){
+function sizeAdded(size){
     
-    iitem.size=siz;
+    item.size=size;
 }
+
+function myFunction(msg, type) {
+    var popup = document.getElementById("myPopup");
+    popup.innerHTML = msg;
+    if(type)
+    {
+        popup.style.color="#3C763D";
+        popup.style.backgroundColor = "#DFF0D8"; 
+        popup.style.border = "2px solid #3C763D";
+    }
+    else
+    {
+        popup.style.color="maroon";
+        popup.style.backgroundColor = "#F2DEDE"; 
+        popup.style.border = "2px solid maroon";
+    }
+    popup.classList.toggle("show");
+
+    const myTimeout = setTimeout(myGreeting, 3000);
+    
+    function myGreeting() {
+   popup.classList.toggle("show");
+  }
+    
+  }

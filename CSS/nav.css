@@ -105,3 +105,31 @@
     border-radius: 50%;
     /* display: none; */
 }
+
+
+/* Alert popup css for each file */
+          /* The actual popup */
+          .popuptext {
+            visibility: hidden;
+            width: auto;
+            font-weight: bold ;
+            text-align: center;
+            padding: 8px 10px;
+            position: fixed;
+            border-radius: 5px;
+            z-index: 1;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          
+          /* Toggle this class - hide and show the popup */
+          .show {
+            visibility: visible;
+            animation: fadeIn 1s;
+          }
+          
+          @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity:1 ;}
+          }
