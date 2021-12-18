@@ -349,6 +349,33 @@
           border-top-right-radius: 10px;
           width: 100%;
         }
+
+        /* The actual popup */
+.popuptext {
+  visibility: hidden;
+  width: auto;
+  font-weight: bold ;
+  text-align: center;
+  padding: 8px 10px;
+  position: fixed;
+  border-radius: 5px;
+  z-index: 1;
+  top: 200px;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Toggle this class - hide and show the popup */
+.show {
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
     </style>
 </head>
 <body>
@@ -668,6 +695,7 @@ data-flickity-options='{ "wrapAround": true }'>
        <div>Serum</div></div>
    </div>
   </div>
+  <span class="popuptext" id="myPopup"></span>
 
     <div id="footer-container">
 
@@ -701,7 +729,7 @@ function addToCart(id){
 
     console.log(id);
     if(userDetail===null){
-        alert("you need to login first")
+      myFunction(`<span class="iconify" data-icon="bx:bxs-error" style="color: maroon; font-size: 22px;"></span> &nbsp; You need to login first`, false);
     }else{
     
         item.email=userDetail.email;
@@ -722,13 +750,39 @@ function addToCart(id){
                 }
             }
             if(itemflag==true){
-                alert("item Alredy added")
+              myFunction(`<span class="iconify" data-icon="bx:bxs-error" style="color: maroon; font-size: 22px;"></span> &nbsp; This item is already in cart`, false);
             }else{
-    
+              myFunction(`<span class="iconify" data-icon="teenyicons:tick-circle-solid" style="color: #3c763d; font-size: 22px;"></span> &nbsp; Item added to cart Successfully`, true);
                 cartArray.push(item);
                 localStorage.setItem("cartItem",JSON.stringify(cartArray));
             
             }
     }
 }
+
+function myFunction(msg, type) {
+    var popup = document.getElementById("myPopup");
+    popup.innerHTML = msg;
+    if(type)
+    {
+        popup.style.color="#3C763D";
+        popup.style.backgroundColor = "#DFF0D8"; 
+        popup.style.border = "2px solid #3C763D";
+    }
+    else
+    {
+        popup.style.color="maroon";
+        popup.style.backgroundColor = "#F2DEDE"; 
+        popup.style.border = "2px solid maroon";
+    }
+    popup.classList.toggle("show");
+
+    const myTimeout = setTimeout(myGreeting, 3000);
+    
+    function myGreeting() {
+   popup.classList.toggle("show");
+  }
+    
+  }
+
   </script>
