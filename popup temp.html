@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <style>
+        /* The actual popup */
+.popuptext {
+  visibility: hidden;
+  width: auto;
+  /* border-left: 10px solid#97d36b; */
+  background-color: #DFF0D8;
+  color: #3C763D;
+  font-weight: bold ;
+  text-align: center;
+  padding: 8px 10px;
+  position: fixed;
+  border-radius: 5px;
+  border:2px solid #3C763D;
+  z-index: 1;
+  top: 200px;
+  left: 50%;
+  margin-left: -80px;
+}
+
+
+
+/* Toggle this class - hide and show the popup */
+.show {
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+    </style>
+</head>
+<body>
+    <span class="popuptext" id="myPopup"><span class="iconify" data-icon="teenyicons:tick-circle-solid" style="color: #3c763d; font-size: 22px; margin-bottom: -5px;"></span> &nbsp; Item added to cart Successfully</span>
+    <div>
+        <button style="width: 100%; height: 50px; font-size: 30px; background-color: navy; color: white;" onclick="myFunction()">Click</button>
+    </div>
+</body>
+</html>
+<script>
+    // for pop up alert
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+   popup.classList.toggle("show");
+    const myTimeout = setTimeout(myGreeting, 3000);
+    
+    function myGreeting() {
+   popup.classList.toggle("show");
+  }
+    
+  }
+</script>
