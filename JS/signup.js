@@ -52,26 +52,27 @@
 
                 else
                 {
-            let userBag=JSON.parse(localStorage.getItem("userArray"))||[];
-            
-            var flag=false;
-            userBag.forEach(el => {
-                if(el.email == detail.email)
-                   {
-                         flag= true;
-                   }
-            });
+                    let userBag=JSON.parse(localStorage.getItem("userArray"))||[];
+                    
+                    var flag=false;
+                    userBag.forEach(el => {
+                        if(el.email == detail.email)
+                        {
+                                flag= true;
+                        }
+                    });
 
-            if(flag)
-            {
-                myFunction(`<span class="iconify" data-icon="bx:bxs-error" style="color: maroon; font-size: 22px;"></span> &nbsp; This Email ID already exists`, false);
-            }
-            else
-            {
-                localStorage.setItem("userArray",JSON.stringify(userBag));
-                myFunction(`<span class="iconify" data-icon="teenyicons:tick-circle-solid" style="color: #3c763d; font-size: 22px;"></span> &nbsp; Your account is created`, true, 1);
-                userBag.push(detail);
-            }
+                    if(flag)
+                    {
+                        myFunction(`<span class="iconify" data-icon="bx:bxs-error" style="color: maroon; font-size: 22px;"></span> &nbsp; This Email ID already exists`, false);
+                    }
+                    else
+                    {
+                        userBag.push(detail)
+                        localStorage.setItem("userArray",JSON.stringify(userBag));
+                        myFunction(`<span class="iconify" data-icon="teenyicons:tick-circle-solid" style="color: #3c763d; font-size: 22px;"></span> &nbsp; Your account is created`, true, 1);
+                        userBag.push(detail);
+                    }
         }
     }
     
