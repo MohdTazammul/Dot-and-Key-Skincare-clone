@@ -20,7 +20,7 @@ For the frontend, we have used HTML, CSS, JS and JQuery. And Localstorage and AP
 ### 3. Products Page
 ![image](https://user-images.githubusercontent.com/90475607/146676223-75b365ea-8d3d-4e03-b28e-f87f423d3c4e.png)
 
-### 4. Product Detials Page
+### 4. Product Details Page
 ![image](https://user-images.githubusercontent.com/90475607/146676393-b78ff046-b9d9-4e25-b2d1-082870877cc7.png)
 
 ### 5. Cart Page
@@ -29,7 +29,7 @@ For the frontend, we have used HTML, CSS, JS and JQuery. And Localstorage and AP
 ### 6. Shipping Page
 ![image](https://user-images.githubusercontent.com/90475607/146676781-3bdcfdb1-191a-496a-befb-1c103c341147.png)
 
-### 7. Shipping Mehtod Page
+### 7. Shipping Method Page
 ![image](https://user-images.githubusercontent.com/90475607/146676827-a0d39731-1fe4-487f-b27b-490313621908.png)
 
 ### 8. Payment Page
