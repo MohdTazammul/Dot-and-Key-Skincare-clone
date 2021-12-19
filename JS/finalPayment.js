@@ -14,7 +14,6 @@ cartBag.map((item) => {
         }
     })
     //console.log(x)
-    totalAmount += +x[0].price;
     let num;
     let div = document.createElement("div");
     let divimg = document.createElement("div")
@@ -34,8 +33,10 @@ cartBag.map((item) => {
 
     divimg.append(nodiv, img)
     let price = document.createElement("h5");
-    price.textContent = x[0].price;
-    div.append(divimg, name, price);
+    let disc = Math.floor((x[0].discount / 100) * x[0].price);
+    disc = x[0].price - disc;
+    totalAmount+=+disc;
+    price.innerHTML= `&#8377; ${disc.toFixed(2)}`;    div.append(divimg, name, price);
     //div.innerHTML="asdsd"
     cartDiv.append(div)
 
