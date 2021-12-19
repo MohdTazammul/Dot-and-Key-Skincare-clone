@@ -3,11 +3,9 @@ function dataUpdate(){
         {
           title: "DETAN + GLOW GREEN TEA CLAY MASK",
           images: [
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/detan_1800x1800.jpg?v=1638990085",
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/sunscreen-packaging-box-3_50cfe7d8-0597-4419-b287-9503a60a1f7a_1800x1800.jpg?v=1638990085",
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Product-texture-9_1800x1800.jpg?v=1638990085",
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/detanclay_1800x1800.jpg?v=1638990085",
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/image-3_540x.png?v=1638990085",
+            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1_060b3622-04da-4875-b7a2-7a13a99db654_360x.jpg?v=1638974886",
+            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/HandCream-Rose_360x.jpg?v=1638974886",
+            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Other-product-packaging-box-4HandCream_360x.jpg?v=1638974886",
           ],
           size: ["85g"],
           description: [
@@ -104,7 +102,7 @@ function dataUpdate(){
         {
           title: "VITAMIN C GLOW PINK CLAY MASK",
           images: [
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/vitamc_1800x1800.jpg?v=1638990146",
+            
             "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/25032021_Dot_Key-0226copy_1800x1800.jpg?v=1638990146",
             "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/pinkclayhuman_18ed2ff0-8d46-4a89-b300-258bf13c32c5_1800x1800.png?v=1638990146",
             "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/vit-c-packaging-box-3_1800x1800.jpg?v=1638990146",
@@ -232,37 +230,8 @@ function dataUpdate(){
           rating: "3.8",
           id: "DK0140",
         },
-        {
-          title: "ACNE DEFENSE GREEN CLAY MASK",
-          images: [
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/acneclay_360x.jpg?v=1638990018",
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/image-1_360x.png?v=1638990018",
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/green_2_360x.png?v=1638990018",
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/GreenClayMask_360x.png?v=1638990018",
-          ],
-          size: ["85mg"],
-          description: [
-            "An anti acne clay mask that removes toxins to combat recurring acne and skin damage from pollution.",
-            "Supercharged with matcha tea and tamanu oil, it detoxifies and mattifies your skin in just 10 minutes.",
-            "Eucalyptus and neem oil provide a soothing experience, while French Green Clay draws out deep-dwelling impurities to unclog pores.",
-            "Salicylic acid in the face mask minimises the appearance of acne scars, pimples and blemishes.",
-            "A perfect non comedogenic clay mask for congested, acne prone skin.",
-          ],
-          perks: [
-            "Get Silicone Applicator Free with this product",
-            "FREE Hand Foot duo on orders above 899",
-            "Pick your FREE 5-in-1 kit",
-            "FREE Face Roller + Face Oil above 2799",
-            "Additionally, Free Body Lotion on all orders above 899",
-            "Buy 2 Get 2 FREE on Bodycare Range",
-            "BUY 3 Get 25% of on Ikwi products",
-          ],
-          category: "Acne",
-          price: "918.45",
-          discount: 23,
-          rating: "3.6",
-          id: "DK0139",
-        },
+       
+
         {
           title: "Glow Elixir Radiance Enhancing Face Oil",
           images: [
@@ -936,7 +905,7 @@ function dataUpdate(){
         {
           title: "CHOCOLATE GLOW MOUSSE FACE MASK",
           images: [
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/chocolate_1800x1800.jpg?v=1638990062",
+           
             "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/image-4_1800x1800.png?v=1638990062",
             "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/website-1080-X-1080_1800x1800.jpg?v=1638990062",
             "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/chocolatemasktexture_1800x1800.jpg?v=1638990062",
@@ -1006,7 +975,7 @@ function dataUpdate(){
         {
           title: "CHARCOAL MOUSSE CLAY MASK",
           images: [
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/charcoa_1800x1800.jpg?v=1638990039",
+            
             "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/acne-packaging-box-1_1800x1800.jpg?v=1638990039",
             "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Product-texture-6_1800x1800.jpg?v=1638990039",
             "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/charcoal-clay-mask_1800x1800.png?v=1638990039",
@@ -1462,44 +1431,11 @@ function dataUpdate(){
           rating: "4.7",
           id: "DK0130",
         },
-        {
-          title: "VITAMIN C GLOW PINK CLAY MASK",
-          images: [
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/vitamc_360x.jpg?v=1638990146",
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/25032021_Dot_Key-0226copy_540x.jpg?v=1638990146",
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/pinkclayhuman_18ed2ff0-8d46-4a89-b300-258bf13c32c5_540x.png?v=1638990146",
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/vit-c-packaging-box-3_360x.jpg?v=1638990146",
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/6779ada3886948fe93cf97d4a02b853f.thumbnail.0000000_360x.jpg?v=1612170293",
-          ],
-          size: ["85g"],
-          description: [
-            "Layer your skin with the power of pink to treat dullness and clear deep-rooted impurities for glowing, nourished and hydrated skin.",
-            "Featuring a rich, creamy texture with French pink clay and natural vitamin C from Kakadu Plum, it reverses dull, tired skin to reveal a bright, glowing complexion.",
-            "Acerola cherry, the little powerhouse of antioxidants, boosts collagen production to repair skin damage and uneven skin tone.",
-            "Additionally, when kaolin and bentonite clay blends with hyaluronic acid, it removes deep-seated impurities while locking in moisture for clean, soft and bouncy skin.",
-            "Whether you are getting ready for a party or want to give your skin a 'quick pick-up', this soft pink clay mask is the ideal solution for nourished, hydrated and radiant skin.",
-          ],
-          perks: [
-            "Get Silicone Applicator Free with this product",
-            "FREE Hand Foot duo on orders above 899",
-            "Pick your FREE 5-in-1 kit above 1899",
-            "FREE Face Roller + Face Oil above 2799",
-            "Additionally, Free Body Lotion on all orders above 899",
-            "Buy 2 Get 2 FREE on Bodycare Range",
-            "BUY 3 Get 25% of on Ikwi products",
-            "Extra 3% off on all prepaid orders",
-            "20% Cashback on all orders",
-          ],
-          category: "Skin Glow",
-          price: "504.17",
-          discount: 0,
-          rating: "4.0",
-          id: "DK0149",
-        },
+        
         {
           title: "ENERGIZING BUBBLE CLAY MASK",
           images: [
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/bubble_1800x1800.jpg?v=1638990117",
+           
             "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Mint-packaging-box-1_1800x1800.jpg?v=1638990117",
             "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Product-texture-5_1800x1800.jpg?v=1638990117",
             "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/bubbleclay_1800x1800.jpg?v=1638990117",
@@ -1569,7 +1505,7 @@ function dataUpdate(){
         {
           title: "ACNE DEFENSE GREEN CLAY MASK",
           images: [
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/acneclay_1800x1800.jpg?v=1638990018",
+           
             "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/image-1_1800x1800.png?v=1638990018",
             "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/green_2_1800x1800.png?v=1638990018",
             "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/GreenClayMask_1800x1800.png?v=1638990018",
@@ -1666,7 +1602,7 @@ function dataUpdate(){
         {
           title: "DAMASK ROSE RESURFACING GEL MASK",
           images: [
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/damask_360x.jpg?v=1638989872",
+            
             "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/2_7_360x.png?v=1638989872",
             "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/3_9_360x.png?v=1638989872",
             "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/4_9_360x.png?v=1638989872",
