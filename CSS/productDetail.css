@@ -156,6 +156,10 @@ li{
     color: #FE506E;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+#smallimg{
+    height: 500px;
+    overflow: scroll;
+}
 
 
 
