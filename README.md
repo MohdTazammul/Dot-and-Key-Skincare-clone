@@ -7,11 +7,8 @@ For the frontend, we have used HTML, CSS, JS and JQuery. And Localstorage and AP
 ## Webpages
 
 #### 1. Landing Page
-![image](https://user-images.githubusercontent.com/90475607/146676024-d8cb5833-fd1d-4753-b708-e8b96902bb70.png)
-![image](https://user-images.githubusercontent.com/90475607/146676040-b736d7d9-025b-43b9-993e-78ff183f164d.png)
-![image](https://user-images.githubusercontent.com/90475607/146676068-550b665c-2717-46b4-8738-84000a335961.png)
-![image](https://user-images.githubusercontent.com/90475607/146676082-589fbd4e-27f2-4b38-aebb-84f46912dd64.png)
-![image](https://user-images.githubusercontent.com/90475607/146676097-c09e8543-4427-425b-9e0b-d6c0e0abaa6d.png)
+![Dot and Key Skincare](https://user-images.githubusercontent.com/90475607/146956568-ba2cb705-8571-4be4-a7ce-b379c5487609.png)
+
 
 ### 2. Signup Page & Login page
 ![image](https://user-images.githubusercontent.com/90475607/146676152-688dc4d6-f41d-4aea-9c81-5ab74e9ce6a1.png)
