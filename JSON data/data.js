@@ -1144,8 +1144,8 @@ function dataUpdate(){
         {
           title: "Mask Must Haves",
           images: [
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/3_50f381da-c383-4c66-bab9-494ef5c64166_360x.jpg?v=1639046641",
-            "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/3a_1_360x.jpg?v=1639046641",
+            "https://user-images.githubusercontent.com/90475607/189632949-1b1fc3c3-9a78-47ee-a2a9-9c687b84efd8.jpg",
+            "https://user-images.githubusercontent.com/90475607/189633131-35531e63-d5c9-4c5d-8295-66ddbb67355d.jpg",
           ],
           size: ["30ml"],
           description: [
