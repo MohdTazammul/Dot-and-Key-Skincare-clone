@@ -1,4 +1,7 @@
 # Dot-and-Key-Skincare-clone
+
+> DISCLAIMER: THIS PAGE WAS MADE AS A PERSONAL EDUCATIONAL PROJECT. This is NOT the official site of the company or brand identified on the page. The creator of this page is NOT affiliated with the company or brand in any way. This page is a personal project made in connection with an educational exercise.
+
 This is a clone of <a href="https://www.dotandkey.com/">Dot and Key Skincare</a> which is a new-age skincare brand with products such as Moisturizer, Serum and Oil and skincare products. Dot & Key is a fresh take on skincare. One that's founded on the understanding that everyone is unique. Through our range of advanced skincare products, we address lifestyle needs that are often overlooked.
 
 ## Tech Stacks
